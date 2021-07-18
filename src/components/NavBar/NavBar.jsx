@@ -1,24 +1,43 @@
+import { useState } from 'react';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
+import { FaAlignJustify } from 'react-icons/fa';
 import { ReactComponent as Logo } from '../../images/logo.svg';
 
 const NavBar = () => {
+
+    const [open, setOpen] = useState(false);
+    const handleToggle = () => {
+        setOpen(!open);
+    };
+
     return (
-        <div className='navbar'>
-            <h1><Logo />Margarita <span>Hotel</span></h1>
-            <nav>
-                <ul>
+        <nav className='navbar'>
+            <div className='nav-center'>
+                <div className='nav-header'>
+                    <Link to='/'>
+                        <h1><Logo />Margarita <span>Hotel</span></h1>
+                    </Link>
+                    <button
+                        type='button'
+                        className='nav-btn'
+                        onClick={handleToggle}
+                    ><FaAlignJustify className='nav-icon'/>
+                    </button>
+                </div>
+                <ul className={open ? 'nav-links show-nav' : 'nav-links'}>
                     <li>
-                        <a href='#'>Home</a>
+                        <Link to='/'>Home</Link>
                     </li>
                     <li>
-                        <a href='#'>Rooms</a>
+                        <Link to='/'>Rooms</Link>
                     </li>
                     <li>
-                        <a href='#'>Contact</a>
+                        <Link to='/'>Contact</Link>
                     </li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
     );
 };
 

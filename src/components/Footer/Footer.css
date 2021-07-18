@@ -17,13 +17,18 @@
     margin: 4%;
 }
 
+.footer .footer-follow-us .social-icons span {
+    font-size: 2rem;
+}
+
+.footer .footer-follow-us .social-icons span:hover {
+    color: #af9a7d;
+    cursor: pointer;
+}
+
 .footer .footer-follow-us p {
     font-size: 15px;
     margin: 3%;
-}
-
-.footer .footer-follow-us .social-icons:hover {
-    cursor: pointer;
 }
 
 .footer .footer-follow-us input {
@@ -38,7 +43,7 @@
 }
 
 .footer .footer-follow-us button {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     background-color: #af9a7d;
     color: white;
     font-size: 18px;

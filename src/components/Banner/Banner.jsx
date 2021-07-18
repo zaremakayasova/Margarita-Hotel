@@ -1,14 +1,13 @@
 import './Banner.css';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const Banner = () => {
+const Banner = ({ title, text, url, urlText }) => {
     return (
         <div className='banner'>
-            <h1>Luxurious Rooms</h1>
-            {/* <hr /> */}
-            <p>Deluxe Rooms Starting At $299</p>
-            <Link to='/rooms' className='banner-link'>
-                OUR ROOMS
+            <h1>{title}</h1>
+            <p>{text}</p>
+            <Link to={url} className='banner-link'>
+                {urlText}
             </Link>
         </div>
     );

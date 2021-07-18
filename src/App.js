@@ -7,19 +7,22 @@ import {
 } from "react-router-dom";
 import HomePage from './pages/HomePage/HomePage';
 import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer/Footer';
-
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 
 const App = () => {
   return (
     <div className='App'>
       <NavBar />
       <Router>
-        <Route exact path='/'>
-          <HomePage />
-        </Route>
+        <Switch>
+          <Route exact path='/'>
+            <HomePage />
+          </Route>
+          <Route path='*'>
+            <ErrorPage />
+          </Route>
+        </Switch>
       </Router>
-      <Footer />
     </div>
   );
 };

@@ -14,17 +14,17 @@ const Footer = () => {
                 </form>
                 <span>FOLLOW US</span>
                 <div className='social-icons'>
-                    <FaFacebookSquare size='30px' style={{ marginRight: '25px' }} />
-                    <FaTwitterSquare size='30px' style={{ marginRight: '25px' }} />
-                    <FaInstagramSquare size='30px' style={{ marginRight: '25px' }} />
-                    <FaLinkedin size='30px' style={{ marginRight: '25px' }} />
+                    <span><FaFacebookSquare /></span>
+                    <span><FaTwitterSquare /></span>
+                    <span><FaInstagramSquare /></span>
+                    <span><FaLinkedin /></span>
                 </div>
             </div>
             <div className='footer-address'>
                 <h1><Logo />Margarita <span>Hotel</span></h1>
                 <div>
-                <p>2021 &copy; Margarita Hotels</p>
-                <p>Victoria Street, Roseau, Dominica | +1 767-448-5000 | info@margaritahotels.com</p>
+                    <p>2021 &copy; Margarita Hotels</p>
+                    <p>Victoria Street, Roseau, Dominica | +1 767-448-5000 | info@margaritahotels.com</p>
                 </div>
             </div>
         </div>
