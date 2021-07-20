@@ -1,0 +1,14 @@
+.featured-rooms {
+    padding: 3rem 3rem 1rem 3rem;
+}
+
+.featured-rooms h1 {
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.featured-rooms hr {
+    width: 5%;
+    border: 2px solid #af9a7d;
+    background-color: #af9a7d;
+}

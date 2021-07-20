@@ -18,8 +18,9 @@
     margin-bottom: 0;
     color: #222;
     font-size: 1.5rem;
+    font-weight: 700;
     letter-spacing: 3px;
-    border: 2px solid #222;
+    border: 2px solid #af9a7d;
     padding: 0.5rem 0.5rem;
 }
 .nav-header a h1 span {

@@ -1,0 +1,84 @@
+.room {
+    width: 370px;
+    background-color: #cfcfcf;
+    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s linear;
+}
+
+.room:hover {
+    box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.room .room-img-container {
+    position: relative;
+    transition: all 0.3s linear;
+}
+
+.room .room-img-container .room-price {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 0.3rem 0.6rem 0.5rem;
+    border-bottom-right-radius: 1rem;
+    text-align: center;
+    transition: all 0.3s linear;
+}
+
+.room .room-img-container .room-price p {
+    font-size: 0.8rem;
+    margin: 0.3rem;
+    letter-spacing: 2px;
+}
+
+.room .room-img-container img {
+    width: 100%;
+    display: block;
+    transition: all 0.3s linear;
+}
+
+.room .room-img-container img:hover {
+    opacity: 0.3;
+}
+
+.room .room-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    color: #222;
+    background-color: #af9a7d;
+    border: 2px solid #fff;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s linear;
+}
+
+.room .room-img-container:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.room .room-img-container:hover .room-price {
+    opacity: 0;
+}
+
+.room .room-img-container:hover .room-link {
+    transform: translate(-50%, -50%) scale(1);;
+}
+
+
+.room .room-link:hover {
+    transform: scale(1.1);
+}
+
+.room h3 {
+    text-align: center;
+    padding-bottom: 1rem;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
