@@ -1,5 +1,11 @@
 .featured-rooms {
-    padding: 3rem 3rem 1rem 3rem;
+    padding: 3rem 1.2rem 3rem 1.2rem;
+}
+
+.featured-rooms .featured-rooms-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .featured-rooms h1 {
@@ -8,7 +14,22 @@
 }
 
 .featured-rooms hr {
-    width: 5%;
+    width: 15%;
+    margin-bottom: 4rem;
     border: 2px solid #af9a7d;
     background-color: #af9a7d;
+}
+
+@media screen and (min-width: 992px) {
+    .featured-rooms {
+        padding: 3rem 3rem 0.5rem 3rem;
+    }
+    .featured-rooms .featured-rooms-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .featured-rooms hr {
+        width: 5%;
+        margin-bottom: unset;
+    }
 }

@@ -34,6 +34,7 @@
     letter-spacing: 3px;
     margin-top: 1.3rem;
     cursor: pointer;
+    transition: all 0.3s linear;
 }
 
 .banner .banner-link:hover {

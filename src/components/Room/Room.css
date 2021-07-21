@@ -1,8 +1,17 @@
 .room {
-    width: 370px;
+    position: relative;
+    width: 300px;
+    margin: 1.5rem 0;
     background-color: #cfcfcf;
     box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
     transition: all 0.3s linear;
+}
+
+.room h3 {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    letter-spacing: 3px;
+    text-transform: capitalize;
 }
 
 .room:hover {
@@ -10,8 +19,26 @@
 }
 
 .room .room-img-container {
-    position: relative;
     transition: all 0.3s linear;
+}
+
+.room .room-img-container:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.room .room-img-container:hover .room-price {
+    opacity: 0;
+}
+
+.room .room-img-container img {
+    width: 100%;
+    display: block;
+    transition: all 0.3s linear;
+}
+
+.room .room-img-container img:hover {
+    opacity: 0.3;
 }
 
 .room .room-img-container .room-price {
@@ -32,53 +59,52 @@
     letter-spacing: 2px;
 }
 
-.room .room-img-container img {
-    width: 100%;
-    display: block;
-    transition: all 0.3s linear;
-}
-
-.room .room-img-container img:hover {
-    opacity: 0.3;
-}
-
 .room .room-link {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 38%;
+    left: 28%;
     text-decoration: none;
     font-family: "Raleway", sans-serif;
     letter-spacing: 3px;
     font-size: 1rem;
     color: #222;
     background-color: #af9a7d;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
+    box-shadow: 2px 3px 2px 0px #af9a7d;
     padding: 0.5rem 1rem;
     font-weight: 600;
     transition: all 0.3s linear;
 }
 
-.room .room-img-container:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.room .room-img-container:hover .room-price {
-    opacity: 0;
-}
-
-.room .room-img-container:hover .room-link {
-    transform: translate(-50%, -50%) scale(1);;
-}
-
-
 .room .room-link:hover {
-    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5);
+    color: #fff;
 }
 
-.room h3 {
-    text-align: center;
-    padding-bottom: 1rem;
-    letter-spacing: 3px;
-    text-transform: capitalize;
+@media screen and (min-width: 768px) {
+    .room {
+        width: 470px;
+        margin: 2rem 1.5rem;
+    }
+    .room .room-link {
+        top: 40%;
+        left: 35%;
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .room {
+        width: 370px;
+        margin: 5rem 1.5rem;
+    }
+    .room h3 {
+        padding-bottom: 1rem;
+    }
+    .room .room-link {
+        top: 40%;
+        left: 30%;
+        padding: 0.5rem 1rem;
+    }
 }

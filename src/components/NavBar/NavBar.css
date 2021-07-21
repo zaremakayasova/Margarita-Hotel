@@ -4,7 +4,6 @@
     padding: 0.5rem 1rem;
     background: white;
     z-index: 999;
-    opacity: 0.5;
 }
 .nav-header {
     display: flex;
@@ -59,7 +58,22 @@
     height: 140px;
 }
 
+@media screen and (min-width: 576px) {
+    .nav-btn {
+        margin-left: 22rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nav-btn {
+        margin-left: 35rem;
+    }
+}
+
 @media screen and (min-width: 992px) {
+    .navbar {
+        opacity: 0.5;
+    }
     .nav-header a h1 {
         margin-bottom: 0.5rem;
         font-size: 1.8rem;

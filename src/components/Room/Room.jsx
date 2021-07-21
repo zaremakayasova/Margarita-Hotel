@@ -10,10 +10,11 @@ const Room = ({ room: { fields: { name, price, images } } }) => {
                     <p>$ {price}</p>
                     <p>per night</p>
                 </div>
+            </div>
             <Link to='/' className='room-link'>
                 FEATURES
             </Link>
-            </div>
+
             <h3>{name}</h3>
         </div>
     );
