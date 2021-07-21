@@ -5,7 +5,9 @@ const Banner = ({ title, text, url, urlText }) => {
     return (
         <div className='banner'>
             <h1>{title}</h1>
-            <p>{text}</p>
+            {text ? (
+                <p>{text}</p>
+            ) : (<hr />)}
             <Link to={url} className='banner-link'>
                 {urlText}
             </Link>

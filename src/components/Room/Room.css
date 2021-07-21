@@ -1,7 +1,7 @@
 .room {
     position: relative;
     width: 300px;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     background-color: #cfcfcf;
     box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
     transition: all 0.3s linear;
@@ -85,7 +85,7 @@
 @media screen and (min-width: 768px) {
     .room {
         width: 470px;
-        margin: 2rem 1.5rem;
+        margin: 1rem 1.5rem;
     }
     .room .room-link {
         top: 40%;
@@ -97,7 +97,7 @@
 @media screen and (min-width: 992px) {
     .room {
         width: 370px;
-        margin: 5rem 1.5rem;
+        margin: 1rem 1.5rem;
     }
     .room h3 {
         padding-bottom: 1rem;

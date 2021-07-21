@@ -6,8 +6,10 @@ import {
   Link
 } from "react-router-dom";
 import HomePage from './pages/HomePage/HomePage';
-import NavBar from './components/NavBar/NavBar';
+import RoomsPage from './pages/RoomsPage/RoomsPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import NavBar from './components/NavBar/NavBar';
+
 
 const App = () => {
   return (
@@ -17,6 +19,9 @@ const App = () => {
         <Switch>
           <Route exact path='/'>
             <HomePage />
+          </Route>
+          <Route exact path='/rooms'>
+            <RoomsPage />
           </Route>
           <Route path='*'>
             <ErrorPage />

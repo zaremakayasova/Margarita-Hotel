@@ -1,9 +1,11 @@
-import HeroSection from "../../components/HeroSection/HeroSection";
+import HeroSection from '../../components/HeroSection/HeroSection';
+import NavBar from '../../components/NavBar/NavBar';
 
 const ErrorPage = () => {
     return (
         <div>
-            <HeroSection title={404} text={'Page Not Found'} url={'/'} urlText={'RETURN HOME'} />
+            <NavBar />
+            <HeroSection sectionName={'error-page'} title={404} text={'Page Not Found'} url={'/'} urlText={'RETURN HOME'} />
         </div>
     );
 };

@@ -15,6 +15,12 @@
     letter-spacing: 6px;
 }
 
+.banner hr {
+    width: 15%;
+    border: 2px solid #af9a7d;
+    background-color: #af9a7d;
+}
+
 .banner p {
     text-align: center;
     font-size: 1.2rem;
@@ -52,8 +58,10 @@
         font-size: 3rem;
         letter-spacing: 8px;
     }
+    .banner hr {
+        width: 45%;
+    }
     .banner p {
         font-size: 1.2rem;
     }
 }
-

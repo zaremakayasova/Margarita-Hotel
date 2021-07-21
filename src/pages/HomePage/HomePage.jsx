@@ -8,7 +8,7 @@ const HomePage = () => {
     return (
         <div>
             <NavBar />
-            <HeroSection title={'Luxurious Rooms'} text={'Deluxe Rooms Starting At $299'} url={'/rooms'} urlText={'OUR ROOMS'} />
+            <HeroSection sectionName={'home-page'} title={'Luxurious Rooms'} text={'Deluxe Rooms Starting At $299'} url={'/rooms'} urlText={'OUR ROOMS'} />
             <Services />
             <FeaturedRooms />
         </div>

@@ -27,6 +27,7 @@
     .featured-rooms .featured-rooms-container {
         flex-direction: row;
         justify-content: center;
+        padding: 4rem 3rem;
     }
     .featured-rooms hr {
         width: 5%;

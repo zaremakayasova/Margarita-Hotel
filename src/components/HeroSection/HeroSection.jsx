@@ -1,9 +1,9 @@
 import './HeroSection.css';
 import Banner from '../Banner/Banner';
 
-const HeroSection = ({ title, text, url, urlText }) => {
+const HeroSection = ({ title, text, url, urlText, sectionName }) => {
     return (
-        <div className='hero-section'>
+        <div className={sectionName}>
             <Banner title={title} text={text} url={url} urlText={urlText} />
         </div>
     );

@@ -22,7 +22,7 @@ const NavBar = () => {
                         type='button'
                         className='nav-btn'
                         onClick={handleToggle}
-                    ><FaAlignJustify className='nav-icon'/>
+                    ><FaAlignJustify className='nav-icon' />
                     </button>
                 </div>
                 <ul className={open ? 'nav-links show-nav' : 'nav-links'}>
@@ -30,10 +30,10 @@ const NavBar = () => {
                         <Link to='/'>Home</Link>
                     </li>
                     <li>
-                        <Link to='/'>Rooms</Link>
+                        <Link to='/rooms'>Rooms</Link>
                     </li>
                     <li>
-                        <Link to='/'>Contact</Link>
+                        <Link to='/contact'>Contact</Link>
                     </li>
                 </ul>
             </div>
