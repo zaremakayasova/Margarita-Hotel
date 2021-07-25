@@ -59,6 +59,9 @@
 }
 
 @media screen and (min-width: 576px) {
+    .navbar {
+        opacity: 0.8;
+    }
     .nav-btn {
         margin-left: 22rem;
     }
@@ -71,9 +74,6 @@
 }
 
 @media screen and (min-width: 992px) {
-    .navbar {
-        opacity: 0.5;
-    }
     .nav-header a h1 {
         margin-bottom: 0.5rem;
         font-size: 1.8rem;

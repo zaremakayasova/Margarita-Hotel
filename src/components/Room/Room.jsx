@@ -1,7 +1,7 @@
 import './Room.css';
 import { Link } from 'react-router-dom';
 
-const Room = ({ room: { fields: { name, price, images } } }) => {
+const Room = ({ room: { fields: { name, price, slug, images } } }) => {
     return (
         <div className='room'>
             <div className='room-img-container'>
@@ -11,10 +11,9 @@ const Room = ({ room: { fields: { name, price, images } } }) => {
                     <p>per night</p>
                 </div>
             </div>
-            <Link to='/' className='room-link'>
+            <Link to={`/rooms/${slug}`} className='room-link'>
                 FEATURES
             </Link>
-
             <h3>{name}</h3>
         </div>
     );

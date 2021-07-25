@@ -11,6 +11,7 @@
 
 .banner h1 {
     text-align: center;
+    text-transform: capitalize;
     font-size: 2.5rem;
     letter-spacing: 6px;
 }
@@ -23,9 +24,10 @@
 
 .banner p {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .banner .banner-link {
@@ -48,12 +50,14 @@
     color: #af9a7d;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
     .banner {
         width: auto;
         padding: 1.5rem 5rem;
-        margin-top: 2.5rem;
     }
+}
+
+@media screen and (min-width: 992px) {
     .banner h1 {
         font-size: 3rem;
         letter-spacing: 8px;

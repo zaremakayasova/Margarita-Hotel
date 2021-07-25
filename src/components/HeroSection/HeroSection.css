@@ -1,29 +1,20 @@
-.home-page {
+.hero-section {
     height: 100vh;
-    background-image: url("../../images/hero.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.home-page {
+    background-image: url("../../images/hero.jpg");
 }
 
 .rooms-page {
-    height: 100vh;
     background-image: url("../../redux/rooms/images/room-2.jpeg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .error-page {
-    height: 100vh;
-    background-image: url("../../images/hero.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: url("../../images/error.jpg");
 }
