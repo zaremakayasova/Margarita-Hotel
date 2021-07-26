@@ -1,38 +1,43 @@
 .footer {
-    display: flex;
-}
-
-.footer .footer-follow-us {
-    width: 50%;
-    padding-top: 3%;
-    padding-bottom: 2%;
+    background-color: #cfcfcf;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0.5rem;
 }
 
-.footer .footer-follow-us span {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 4%;
+.footer h2 {
+    letter-spacing: 3px;
 }
 
-.footer .footer-follow-us .social-icons span {
-    font-size: 2rem;
+.footer p {
+    font-weight: 500;
 }
 
-.footer .footer-follow-us .social-icons span:hover {
-    color: #af9a7d;
+.footer .footer-social .footer-icons {
+    margin-top: 3rem;
+}
+
+.footer .footer-social span {
+    font-size: 2.5rem;
+    margin: 0.5rem;
+    transition: all 0.3s linear;
+}
+
+.footer .footer-social svg:hover {
+    transform: scale(1.1);
     cursor: pointer;
 }
 
-.footer .footer-follow-us p {
-    font-size: 15px;
-    margin: 3%;
+.footer-social,
+.footer-promotions,
+.footer-address {
+    width: 80%;
+    text-align: center;
 }
 
-.footer .footer-follow-us input {
-    width: 100%;
+.footer-promotions input {
+    width: 50%;
     height: 35px;
     border: 2px solid #af9a7d;
     outline: none;
@@ -40,50 +45,67 @@
     padding-left: 15px;
     padding-right: 10px;
     box-shadow: 0 6px 6px -6px gray;
+    margin-bottom: 1rem;
 }
 
-.footer .footer-follow-us button {
+.footer-promotions button {
     font-family: "Raleway", sans-serif;
     background-color: #af9a7d;
     color: white;
-    font-size: 18px;
-    padding: 2%;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 3%;
     letter-spacing: 1px;
     border: 2px solid #af9a7d;
-    width: 40%;
-    margin-top: 4%;
+    width: 30%;
 }
 
-.footer .footer-follow-us button:hover {
+.footer-promotions button:hover {
     background-color: transparent;
     color: #af9a7d;
     cursor: pointer;
 }
 
-.footer .footer-address {
-    padding-top: 3%;
-    padding-bottom: 2%;
-    color: black;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer .footer-address h1 {
-    font-size: 25px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    border: 2px solid darkslategrey;
-    padding: 0.4%;
-}
-
-.footer .footer-address span {
+.footer-address span {
     color: #af9a7d;
 }
 
-.footer .footer-address div {
-    margin-top: 30%;
-    font-size: 15px;
-    text-transform: uppercase;
+.footer p {
+    margin: 3rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-social,
+    .footer-promotions,
+    .footer-address {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .footer {
+        flex-direction: row;
+        align-items: unset;
+        justify-content: center;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+    .footer .footer-social .footer-icons {
+        margin-top: 2rem;
+    }
+    .footer-social,
+    .footer-promotions,
+    .footer-address {
+        width: 30%;
+    }
+    .footer-promotions input {
+        width: 60%;
+        margin-bottom: unset;
+    }
+    .footer-promotions button {
+        padding: 2%;
+        width: 20%;
+    }
+    .footer p {
+        margin: 2rem 0;
+    }
 }

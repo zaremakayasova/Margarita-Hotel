@@ -20,8 +20,8 @@ const SingleRoom = ({ match, rooms }) => {
                 </StyledHero>
                 <div className='single-room-images'>
                     {
-                        otherImages.map(img => (
-                            <img key={matchedRoom.sys.id} src={img.fields.file.url} alt={name} />
+                        otherImages.map((img, index) => (
+                            <img key={index} src={img.fields.file.url} alt={name} />
                         ))
                     }
                 </div>

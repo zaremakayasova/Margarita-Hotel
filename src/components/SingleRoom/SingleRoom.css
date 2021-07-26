@@ -44,7 +44,7 @@
 
 .single-room .single-room-details .single-room-info {
     width: 70%;
-    margin: 0 5%;
+    margin: 0 5% 5% 5%;
 }
 
 @media screen and (min-width: 576px) {
@@ -84,8 +84,9 @@
     }
     .single-room .single-room-details .single-room-info {
         width: 34%;
+        margin-bottom: 3rem;
     }
     .single-room .extras-title {
-        margin-top: 2rem;
+        margin-top: 5%;
     }
 }

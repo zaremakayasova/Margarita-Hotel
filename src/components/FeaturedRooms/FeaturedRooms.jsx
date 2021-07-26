@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import './FeaturedRooms.css';
 import Room from '../Room/Room';
 
@@ -16,6 +17,9 @@ const FeaturedRooms = ({ rooms }) => {
                     ))
 
                 }
+            </div>
+            <div className='featured-rooms-link'>
+                <Link className='featured-button' to='/rooms'>VIEW ALL OFFERS</Link>
             </div>
         </div>
     );
