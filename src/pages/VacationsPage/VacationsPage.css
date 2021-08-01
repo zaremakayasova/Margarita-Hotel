@@ -1,0 +1,56 @@
+.vacations-page {
+    height: 100vh;
+    padding: 10rem 5rem;
+    display: flex;
+}
+
+.vacations-page h2 {
+    margin-top: unset;
+}
+
+.vacations-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.vacations-container .vacations-text {
+    width: 30%;
+    text-align: left;
+}
+
+.vacations-container .vacations-text p {
+    line-height: 1.9;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.vacations-container .vacations-text h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.vacations-container .vacations-images {
+    width: 55%;
+}
+
+.vacations-container .vacations-images .img3 {
+    margin-top: 1rem;
+    width: 440px;
+    height: 230px;
+}
+
+.img-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.img-container .img1 {
+    width: 250px;
+    height: 330px;
+}
+
+.img-container .img2 {
+    width: 250px;
+    height: 230px;
+}
