@@ -1,0 +1,117 @@
+.rewards {
+    background-color: #f0eeed;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 1rem 2rem 1rem;
+}
+
+.slide-container {
+    width: 100%;
+}
+
+.each-slide div {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.each-slide span {
+    color: white;
+    padding: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.rewards-text {
+    width: 80%;
+    padding: 2rem;
+}
+
+.rewards-text h1 {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 500;
+    text-align: center;
+}
+
+.rewards-text ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rewards-text ul li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.rewards-text ul li span {
+    color: darkgray;
+    font-size: 2rem;
+    margin: 0 1rem 0;
+}
+
+.rewards-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    background-color: #af9a7d;
+    color: #222;
+    border: 3px solid #af9a7d;
+    font-size: 1.2rem;
+    margin-top: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.rewards-link:hover {
+    background-color: transparent;
+    color: #af9a7d;
+}
+
+@media screen and (min-width: 768px) {
+    .rewards {
+        padding: 5rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .rewards {
+        flex-direction: row;
+        justify-content: center;
+        padding: 5rem;
+    }
+
+    .slide-container {
+        width: 50%;
+    }
+
+    .rewards-text {
+        width: 40%;
+        padding: 0 3rem;
+    }
+
+    .rewards-text h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        line-height: unset;
+    }
+
+    .rewards-text ul li {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .rewards-link {
+        margin-top: 1.5rem;
+    }
+
+    .rewards-link:hover {
+        background-color: transparent;
+        color: #af9a7d;
+    }
+}

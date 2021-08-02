@@ -1,4 +1,5 @@
 .featured-rooms {
+    background-color: #d1c5b5;
     padding: 3rem 1.2rem 3rem 1.2rem;
 }
 
@@ -29,8 +30,8 @@
     display: inline-block;
     text-decoration: none;
     padding: 1rem;
-    background-color: transparent;
-    color: #af9a7d;
+    background-color: #af9a7d;
+    color: #222;
     border: 3px solid #af9a7d;
     font-size: 1rem;
     font-weight: 700;
@@ -40,8 +41,7 @@
     transition: all 0.3s linear;
 }
 .featured-button:hover {
-    background-color: #af9a7d;
-    color: #222;
+    background-color: transparent;
 }
 
 @media screen and (min-width: 992px) {

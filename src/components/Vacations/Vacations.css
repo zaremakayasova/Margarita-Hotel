@@ -1,0 +1,146 @@
+.vacations {
+    background-color: #d1c5b5;
+    padding: 7rem 1rem 2rem 1rem;
+}
+
+.vacations-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.vacations-text {
+    width: 80%;
+}
+
+.vacations-text p {
+    line-height: 1.9;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.vacations-text h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.vacations-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    background-color: #af9a7d;
+    color: #222;
+    border: 3px solid #af9a7d;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.vacations-link:hover {
+    background-color: transparent;
+    color: #af9a7d;
+}
+
+.vacations-images .img3 {
+    display: none;
+}
+
+.img-container .img1 {
+    margin-top: 2rem;
+    width: 300px;
+    height: 280px;
+}
+
+.img-container .img2 {
+    display: none;
+}
+
+@media screen and (min-width: 576px) {
+    .vacations {
+        padding: 8rem 1rem 2rem 1rem;
+    }
+
+    .img-container .img1 {
+        margin-top: 2rem;
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .vacations-images .img3 {
+        display: inline-block;
+        margin-top: 1rem;
+        width: 500px;
+        height: 350px;
+    }
+
+    .img-container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .img-container .img1 {
+        display: inline-block;
+        width: 300px;
+        height: 330px;
+    }
+
+    .img-container .img2 {
+        display: inline-block;
+        width: 300px;
+        height: 230px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .vacations {
+        padding: 7rem 5rem 5rem 5rem;
+    }
+
+    .vacations-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: unset;
+    }
+
+    .vacations-text {
+        width: 30%;
+        text-align: left;
+        margin-right: 5rem;
+    }
+
+    .vacations-text h1 {
+        font-size: 3.5rem;
+        font-weight: 600;
+    }
+
+    .vacations-images {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vacations-images .img3 {
+        width: 450px;
+        height: 230px;
+    }
+
+    .img-container .img1 {
+        width: 250px;
+        height: 330px;
+        margin-right: 1rem;
+    }
+
+    .img-container .img2 {
+        width: 250px;
+        height: 230px;
+    }
+}
