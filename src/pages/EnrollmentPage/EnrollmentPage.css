@@ -1,0 +1,99 @@
+.enrollment-page {
+    background-color: #f0eeed;
+    padding: 10rem 2rem 4rem 2rem;
+}
+
+.enrollment-container {
+    margin-left: 10rem;
+}
+
+.enrollment-page h1 {
+    color: #af9a7d;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.enrollment-page p {
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.enrollment-page h1 sup {
+    font-size: 1.3rem;
+}
+
+form {
+    width: 75%;
+}
+
+.enrollment-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container input {
+    margin: 0.5rem 2rem 2rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid #ccc;
+    color: #3f3d3d;
+}
+
+form select {
+    display: block;
+    width: 50%;
+    margin: 1rem 2rem 2rem 0;
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid #ccc;
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.enrollment-page label {
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.address-container input {
+    display: block;
+    margin: 0.5rem 2rem 2rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 50%;
+    outline: none;
+    border: 1px solid #ccc;
+    color: #3f3d3d;
+}
+
+form button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    background-color: #af9a7d;
+    color: #222;
+    border: 3px solid #af9a7d;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+form button:hover {
+    background-color: transparent;
+    color: #af9a7d;
+}

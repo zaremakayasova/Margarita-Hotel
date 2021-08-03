@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
@@ -10,7 +11,7 @@ import { FaHandHoldingHeart, FaWifi, FaRegHeart } from "react-icons/fa";
 import { RiMoneyDollarCircleLine, RiStarSmileLine, RiCalendarCheckLine } from 'react-icons/ri';
 
 
-const Rewards = () => {
+const Rewards = ({ match }) => {
     return (
         <div className='rewards'>
             <div className='slide-container'>
@@ -33,7 +34,7 @@ const Rewards = () => {
                 </Slide>
             </div>
             <div className='rewards-text'>
-                <h1>Margarita Hotel Rewards members experience more</h1>
+                <h1>Margarita Hotel<sup>&reg;</sup> Rewards members experience more</h1>
                 <ul>
                     <li><span><RiMoneyDollarCircleLine /></span>Access to our LOWEST RATES, exclusive to members only</li>
                     <li><span><RiStarSmileLine /></span>Earn points on every stay at 6,000+ destinations</li>
@@ -42,10 +43,10 @@ const Rewards = () => {
                     <li><span><FaWifi /></span>Free WIFI every time</li>
                     <li><span><FaRegHeart /></span>Plus other exclusive Elite benefits</li>
                 </ul>
-                <Link className='rewards-link' to='/'>JOIN NOW</Link>
+                <Link className='rewards-link' to={`${match.path}/enrollment`}>JOIN NOW</Link>
             </div>
         </div>
     );
 };
 
-export default Rewards;
+export default withRouter(Rewards);
