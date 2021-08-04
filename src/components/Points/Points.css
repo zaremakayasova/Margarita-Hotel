@@ -1,0 +1,48 @@
+.points {
+    background-color: #f4f2ed;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.points-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+}
+
+.points-container span {
+    color: #af9a7d;
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+}
+
+.points-container p {
+    color: #222;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.points-container ul li {
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+@media screen and (min-width: 768px) {
+    .points {
+        padding: 4rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .points-container {
+        width: 30%;
+    }
+}

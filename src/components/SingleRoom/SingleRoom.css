@@ -1,5 +1,6 @@
 .single-room {
     background-color: #d1c5b5;
+    padding-top: 3rem;
 }
 
 .single-room h3 {
@@ -52,18 +53,29 @@
 }
 
 @media screen and (min-width: 576px) {
+    .single-room {
+        padding-top: 6rem;
+    }
+
     .single-room .single-room-images img {
         width: 400px;
     }
 }
 
 @media screen and (min-width: 768px) {
+    .single-room {
+        padding-top: 5rem;
+    }
+
     .single-room .single-room-images img {
         width: 500px;
     }
 }
 
 @media screen and (min-width: 992px) {
+    .single-room {
+        padding-top: unset;
+    }
     .single-room h3 {
         margin-top: unset;
     }
