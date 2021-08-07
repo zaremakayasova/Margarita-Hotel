@@ -4,21 +4,30 @@ import Room from '../Room/Room';
 import RoomsFilter from '../RoomsFilter/RoomsFilter';
 
 
-const RoomsContainer = ({ rooms }) => {
+const RoomsContainer = ({ sortedRooms }) => {
+    if (sortedRooms.length === 0) {
+        return (
+            <div className='empty-search'>
+                <h3>Unfortunately no rooms matched your search parameters...</h3>
+            </div>
+        );
+    }
     return (
-        <div className='rooms-container'>
+        <div className='rooms-section'>
             <RoomsFilter />
-            {
-                rooms.map(room => (
-                    <Room key={room.sys.id} room={room} />
-                ))
-            }
+            <div className='rooms-container'>
+                {
+                    sortedRooms.map(room => (
+                        <Room key={room.sys.id} room={room} />
+                    ))
+                }
+            </div>
         </div>
     );
 };
 
 const mapStateToProps = state => ({
-    rooms: state.rooms.rooms
+    sortedRooms: state.rooms.sortedRooms
 });
 
 export default connect(mapStateToProps)(RoomsContainer);

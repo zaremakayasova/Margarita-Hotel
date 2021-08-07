@@ -26,7 +26,7 @@ const FeaturedRooms = ({ rooms }) => {
 };
 
 const mapStateToProps = state => ({
-    rooms: state.rooms.rooms
+    rooms: state.rooms.sortedRooms
 });
 
 export default connect(mapStateToProps)(FeaturedRooms);
