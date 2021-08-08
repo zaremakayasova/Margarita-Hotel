@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import './RoomsFilter.css';
-import { filterRoomTypes, filterRoomCapacity, filterPriceRange } from '../../redux/rooms/rooms.actions.js';
+import { filterRoomTypes, filterRoomCapacity, filterPriceRange, filterMinSize, filterMaxSize, filterBreakfast } from '../../redux/rooms/rooms.actions.js';
 
 
-const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, price, breakfast, pets }) => {
+const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, filterMinSize, filterMaxSize, filterBreakfast, price, minSize, maxSize, breakfast, pets }) => {
     const handleRoomTypes = e => {
         filterRoomTypes(e.target.value);
     };
@@ -15,6 +15,19 @@ const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, pr
     const handlePriceRange = e => {
         filterPriceRange(parseInt(e.target.value));
     };
+
+    const handleMinSize = e => {
+        filterMinSize(e.target.value);
+    };
+
+    const handleMaxSize = e => {
+        filterMaxSize(e.target.value);
+    };
+
+    const handleBreakfast = e => {
+        filterBreakfast(e.target.value);
+    };
+
 
     return (
         <div className='rooms-filter'>
@@ -47,14 +60,15 @@ const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, pr
                 <span>$ {price}</span>
             </div>
             <div className='size-filter'>
-                <label htmlFor='size-filter'>Room Size</label>
-                <input type='number' id='size-filter' min='100' max='600' defaultValue='600' step='1' onChange={handlePriceRange} />
+                <label htmlFor='size-filter'>Room Size (sq ft)</label>
+                <input type='number' id='size-filter' value={minSize} onChange={handleMinSize} />
+                <input type='number' id='size-filter' value={maxSize} onChange={handleMaxSize} />
             </div>
             <div className='pets-breakfast'>
                 <label htmlFor='breakfast'>Breakfast</label>
-                <input type='checkbox' id='breakfast' checke={breakfast} onChange={handleRoomTypes} />
+                <input type='checkbox' id='breakfast' checked={breakfast} value={breakfast} onChange={handleBreakfast} />
                 <label htmlFor='pets'>Pets</label>
-                <input type='checkbox' id='pets' checked={pets} onChange={handleRoomTypes} />
+                <input type='checkbox' id='pets' checked={pets} value={pets} onChange={handleRoomTypes} />
             </div>
         </div>
     );
@@ -62,6 +76,8 @@ const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, pr
 
 const mapStateToProps = state => ({
     price: state.rooms.price,
+    minSize: state.rooms.minSize,
+    maxSize: state.rooms.maxSize,
     breakfast: state.rooms.breakfast,
     pets: state.rooms.pets
 });
@@ -69,7 +85,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     filterRoomTypes: roomType => dispatch(filterRoomTypes(roomType)),
     filterRoomCapacity: roomCapacity => dispatch(filterRoomCapacity(roomCapacity)),
-    filterPriceRange: roomPrice => dispatch(filterPriceRange(roomPrice))
+    filterPriceRange: roomPrice => dispatch(filterPriceRange(roomPrice)),
+    filterMinSize: minSize => dispatch(filterMinSize(minSize)),
+    filterMaxSize: maxSize => dispatch(filterMaxSize(maxSize)),
+    filterBreakfast: breakfast => dispatch(filterBreakfast(breakfast))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(RoomsFilter);

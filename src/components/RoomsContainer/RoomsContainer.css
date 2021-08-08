@@ -1,3 +1,7 @@
+.empty-search {
+    background-color: #d1c5b5;
+}
+
 .rooms-container {
     background-color: #d1c5b5;
     display: flex;

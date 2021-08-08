@@ -5,6 +5,8 @@ const INITIAL_STATE = {
     sortedRooms: roomsData,
     tempRooms: roomsData,
     price: 600,
+    minSize: 0,
+    maxSize: 1000,
     breakfast: false,
     pets: false
 }
@@ -23,6 +25,21 @@ const filterCapacity = (tempRooms, payload) => {
     return tempRooms;
 };
 
+const filterPrice = (tempRooms, payload) => {
+    return tempRooms.filter(room => room.fields.price <= payload);
+};
+
+const filterSize = (tempRooms, minSize, maxSize) => {
+    return tempRooms.filter(room => room.fields.size >= minSize && room.fields.size <= maxSize);
+};
+
+const filterBreakfast = (tempRooms, payload) => {
+    if (payload) {
+        return tempRooms.filter(room => room.fields.breakfast === true);
+    }
+    return tempRooms;
+};
+
 
 const roomsReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
@@ -35,6 +52,30 @@ const roomsReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 sortedRooms: filterCapacity(state.tempRooms, action.payload)
+            };
+        case RoomsActionTypes.FILTER_PRICE_RANGE:
+            return {
+                ...state,
+                sortedRooms: filterPrice(state.tempRooms, action.payload),
+                price: action.payload
+            };
+        case RoomsActionTypes.FILTER_MIN_SIZE:
+            return {
+                ...state,
+                minSize: action.payload,
+                sortedRooms: filterSize(state.tempRooms, action.payload, state.maxSize)
+            };
+        case RoomsActionTypes.FILTER_MAX_SIZE:
+            return {
+                ...state,
+                maxSize: action.payload,
+                sortedRooms: filterSize(state.tempRooms, state.minSize, action.payload)
+            };
+        case RoomsActionTypes.FILTER_BREAFAST:
+            return {
+                ...state,
+                maxSize: action.payload,
+                sortedRooms: filterBreakfast(state.tempRooms, action.payload)
             };
         default:
             return state;
