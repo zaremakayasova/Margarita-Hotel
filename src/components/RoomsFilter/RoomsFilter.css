@@ -1,8 +1,118 @@
 .rooms-filter {
     background-color: #d1c5b5;
-    padding: 3rem 3rem 1rem 3rem;
+    padding: 2rem 1rem 0.5rem 1rem;
+    text-align: center;
 }
 
 .rooms-filter h1 {
     letter-spacing: 5px;
+}
+
+.rooms-filter hr {
+    width: 15%;
+    border: 2px solid #af9a7d;
+    background-color: #af9a7d;
+}
+
+.rooms-filter-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem 0.5rem 2rem;
+}
+
+.rooms-filter select {
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rooms-filter .price-filter input {
+    cursor: pointer;
+}
+
+.rooms-filter .size-filter input {
+    width: 30%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid gray;
+    margin-right: 0.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rooms-filter label {
+    display: block;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.rooms-filter .pets-breakfast {
+    padding: 2rem;
+    text-align: left;
+}
+
+.rooms-filter .pets-breakfast input {
+    cursor: pointer;
+}
+
+.rooms-filter .breakfast-label {
+    display: inline;
+}
+
+.rooms-filter .pets-label {
+    display: inline;
+}
+
+@media screen and (min-width: 576px) {
+    .rooms-filter select {
+        width: 50%;
+    }
+
+    .rooms-filter .size-filter input {
+        width: 20%;
+    }
+    .rooms-filter .pets-breakfast {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .rooms-filter {
+        padding: 3rem 3rem 1rem 3rem;
+    }
+
+    .rooms-filter hr {
+        width: 5%;
+    }
+
+    .rooms-filter-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 3rem 3rem 1.5rem 3rem;
+    }
+
+    .rooms-filter select {
+        width: 100%;
+        padding: 0.2rem;
+    }
+
+    .rooms-filter .size-filter input {
+        padding: 0.2rem;
+    }
+
+    .rooms-filter label {
+        margin-top: unset;
+    }
+
+    .rooms-filter .pets-breakfast {
+        padding: 1.4rem;
+        text-align: left;
+    }
 }

@@ -9,7 +9,7 @@ const RoomsContainer = ({ sortedRooms }) => {
         return (
             <div className='empty-search'>
                 <RoomsFilter />
-                <h3>Unfortunately no rooms matched your search parameters...</h3>
+                <h2>Unfortunately no rooms matched your search parameters...</h2>
             </div>
         );
     }

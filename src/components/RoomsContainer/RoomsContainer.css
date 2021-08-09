@@ -1,5 +1,12 @@
 .empty-search {
     background-color: #d1c5b5;
+    text-align: center;
+    padding: 0 1rem 3rem 1rem;
+}
+
+.empty-search h2 {
+    text-transform: capitalize;
+    margin-bottom: 0;
 }
 
 .rooms-container {
