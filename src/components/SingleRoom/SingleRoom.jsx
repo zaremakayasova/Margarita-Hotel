@@ -5,8 +5,8 @@ import Banner from '../Banner/Banner';
 import StyledHero from '../StyledHero/StyledHero';
 import ErrorPage from '../../pages/ErrorPage/ErrorPage';
 
-const SingleRoom = ({ match, rooms }) => {
-    const matchedRoom = rooms.find(room => (
+const SingleRoom = ({ match, sortedRooms }) => {
+    const matchedRoom = sortedRooms.find(room => (
         room.fields.slug === match.params.slug
     ));
 
@@ -38,9 +38,9 @@ const SingleRoom = ({ match, rooms }) => {
                     </div>
                     <div className='single-room-info'>
                         <h3>Info</h3>
-                        <h5>Price: ${price}</h5>
-                        <h5>Size: {size} SQFT</h5>
-                        <h5>Max Capacity: {capacity} people</h5>
+                        <h5>Price : ${price}</h5>
+                        <h5>Size : {size} SQFT</h5>
+                        <h5>Max Capacity : {capacity} people</h5>
                         <h5>{pets ? 'Pets allowed' : 'No Pets Allowed'}</h5>
                         <h5>{breakfast ? 'Free breakfast included' : 'Breakfast not included'}</h5>
                     </div>
@@ -57,7 +57,7 @@ const SingleRoom = ({ match, rooms }) => {
 };
 
 const mapStateToProps = state => ({
-    rooms: state.rooms.rooms
+    sortedRooms: state.rooms.sortedRooms
 });
 
 export default withRouter(connect(mapStateToProps)(SingleRoom));

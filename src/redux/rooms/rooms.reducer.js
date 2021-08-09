@@ -33,9 +33,16 @@ const filterSize = (tempRooms, minSize, maxSize) => {
     return tempRooms.filter(room => room.fields.size >= minSize && room.fields.size <= maxSize);
 };
 
-const filterBreakfast = (tempRooms, payload) => {
-    if (payload) {
+const filterBreakfast = (tempRooms, breakfast) => {
+    if (breakfast === false) {
         return tempRooms.filter(room => room.fields.breakfast === true);
+    }
+    return tempRooms;
+};
+
+const filterPets = (tempRooms, pets) => {
+    if (pets === false) {
+        return tempRooms.filter(room => room.fields.pets === true);
     }
     return tempRooms;
 };
@@ -62,8 +69,7 @@ const roomsReducer = (state = INITIAL_STATE, action) => {
         case RoomsActionTypes.FILTER_MIN_SIZE:
             return {
                 ...state,
-                minSize: action.payload,
-                sortedRooms: filterSize(state.tempRooms, action.payload, state.maxSize)
+                minSize: action.payload
             };
         case RoomsActionTypes.FILTER_MAX_SIZE:
             return {
@@ -74,8 +80,14 @@ const roomsReducer = (state = INITIAL_STATE, action) => {
         case RoomsActionTypes.FILTER_BREAFAST:
             return {
                 ...state,
-                maxSize: action.payload,
-                sortedRooms: filterBreakfast(state.tempRooms, action.payload)
+                breakfast: !state.breakfast,
+                sortedRooms: filterBreakfast(state.tempRooms, state.breakfast)
+            };
+        case RoomsActionTypes.FILTER_PETS:
+            return {
+                ...state,
+                pets: !state.pets,
+                sortedRooms: filterPets(state.tempRooms, state.pets)
             };
         default:
             return state;

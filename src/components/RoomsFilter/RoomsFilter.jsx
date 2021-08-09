@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import './RoomsFilter.css';
-import { filterRoomTypes, filterRoomCapacity, filterPriceRange, filterMinSize, filterMaxSize, filterBreakfast } from '../../redux/rooms/rooms.actions.js';
+import { filterRoomTypes, filterRoomCapacity, filterPriceRange, filterMinSize, filterMaxSize, filterBreakfast, filterPets } from '../../redux/rooms/rooms.actions.js';
 
 
-const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, filterMinSize, filterMaxSize, filterBreakfast, price, minSize, maxSize, breakfast, pets }) => {
+const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, filterMinSize, filterMaxSize, filterBreakfast, filterPets, price, minSize, maxSize, breakfast, pets }) => {
     const handleRoomTypes = e => {
         filterRoomTypes(e.target.value);
     };
@@ -24,8 +24,12 @@ const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, fi
         filterMaxSize(e.target.value);
     };
 
-    const handleBreakfast = e => {
-        filterBreakfast(e.target.value);
+    const handleBreakfast = () => {
+        filterBreakfast();
+    };
+
+    const handlePets = () => {
+        filterPets();
     };
 
 
@@ -66,9 +70,9 @@ const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, fi
             </div>
             <div className='pets-breakfast'>
                 <label htmlFor='breakfast'>Breakfast</label>
-                <input type='checkbox' id='breakfast' checked={breakfast} value={breakfast} onChange={handleBreakfast} />
+                <input type='checkbox' id='breakfast' checked={breakfast} onChange={handleBreakfast} />
                 <label htmlFor='pets'>Pets</label>
-                <input type='checkbox' id='pets' checked={pets} value={pets} onChange={handleRoomTypes} />
+                <input type='checkbox' id='pets' checked={pets} onChange={handlePets} />
             </div>
         </div>
     );
@@ -88,7 +92,8 @@ const mapDispatchToProps = dispatch => ({
     filterPriceRange: roomPrice => dispatch(filterPriceRange(roomPrice)),
     filterMinSize: minSize => dispatch(filterMinSize(minSize)),
     filterMaxSize: maxSize => dispatch(filterMaxSize(maxSize)),
-    filterBreakfast: breakfast => dispatch(filterBreakfast(breakfast))
+    filterBreakfast: () => dispatch(filterBreakfast()),
+    filterPets: () => dispatch(filterPets())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(RoomsFilter);

@@ -26,9 +26,8 @@ export const filterMaxSize = maxSize => ({
     payload: maxSize
 });
 
-export const filterBreakfast = breakfast => ({
-    type: RoomsActionTypes.FILTER_BREAFAST,
-    payload: breakfast
+export const filterBreakfast = () => ({
+    type: RoomsActionTypes.FILTER_BREAFAST
 });
 
 export const filterPets = pets => ({
