@@ -4,7 +4,7 @@ A beach resort website project built with React, using Redux and React Hooks for
 
 ## Live Demo
 
-The application is hosted on Netlify and can be accessed at the following web address: []()
+The application is hosted on Netlify and can be accessed at the following web address: [https://quirky-almeida-a7bc27.netlify.app/](https://quirky-almeida-a7bc27.netlify.app/)
 
 ## Screenshots
 
@@ -51,12 +51,12 @@ The application is hosted on Netlify and can be accessed at the following web ad
 - React Icons, React Image Slideshow
 
 
-## Features 
+## Features:
 
 - Responsive and mobile friendly design
 - Search available rooms with different filters
 
-## Run Locally
+## Run Locally:
 
 - Clone the repo
 - run 'npm install'
