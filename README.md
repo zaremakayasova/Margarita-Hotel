@@ -40,6 +40,10 @@ The application is hosted on Netlify and can be accessed at the following web ad
 
 ![Screenshot (73)](https://user-images.githubusercontent.com/71195337/130333960-caac09ee-22b9-4dce-b6bb-e4d4937e789a.png)
 
+#### Unavailable url/page
+
+![Screenshot (79)](https://user-images.githubusercontent.com/71195337/130371847-2dabfbdc-a22a-4408-b299-000b68b81895.png)
+
 
 ## Technologies Used:
 

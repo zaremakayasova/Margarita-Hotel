@@ -4,34 +4,19 @@ import { filterRoomTypes, filterRoomCapacity, filterPriceRange, filterMinSize, f
 
 
 const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, filterMinSize, filterMaxSize, filterBreakfast, filterPets, price, minSize, maxSize, breakfast, pets }) => {
-    const handleRoomTypes = e => {
-        filterRoomTypes(e.target.value);
-    };
+    const handleRoomTypes = e => filterRoomTypes(e.target.value);
 
-    const handleRoomCapacity = e => {
-        filterRoomCapacity(parseInt(e.target.value));
-    };
+    const handleRoomCapacity = e => filterRoomCapacity(parseInt(e.target.value));
 
-    const handlePriceRange = e => {
-        filterPriceRange(parseInt(e.target.value));
-    };
+    const handlePriceRange = e => filterPriceRange(parseInt(e.target.value));
 
-    const handleMinSize = e => {
-        filterMinSize(e.target.value);
-    };
+    const handleMinSize = e => filterMinSize(e.target.value);
 
-    const handleMaxSize = e => {
-        filterMaxSize(e.target.value);
-    };
+    const handleMaxSize = e => filterMaxSize(e.target.value);
 
-    const handleBreakfast = () => {
-        filterBreakfast();
-    };
+    const handleBreakfast = () => filterBreakfast();
 
-    const handlePets = () => {
-        filterPets();
-    };
-
+    const handlePets = () => filterPets();
 
     return (
         <div className='rooms-filter'>
