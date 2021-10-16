@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
@@ -11,7 +11,8 @@ import { FaHandHoldingHeart, FaWifi, FaRegHeart } from "react-icons/fa";
 import { RiMoneyDollarCircleLine, RiStarSmileLine, RiCalendarCheckLine } from 'react-icons/ri';
 
 
-const Rewards = ({ match }) => {
+const Rewards = () => {
+    const match = useRouteMatch();
     return (
         <div className='rewards'>
             <div className='slide-container'>
@@ -49,4 +50,4 @@ const Rewards = ({ match }) => {
     );
 };
 
-export default withRouter(Rewards);
+export default Rewards;

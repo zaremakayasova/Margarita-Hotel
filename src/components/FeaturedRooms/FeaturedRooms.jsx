@@ -1,10 +1,11 @@
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './FeaturedRooms.css';
 import Room from '../Room/Room';
 
 
-const FeaturedRooms = ({ rooms }) => {
+const FeaturedRooms = () => {
+    const rooms = useSelector((state) => state.rooms.sortedRooms);
     const featuredRooms = rooms.filter(room => room.fields.featured);
     return (
         <div className='featured-rooms'>
@@ -25,8 +26,4 @@ const FeaturedRooms = ({ rooms }) => {
     );
 };
 
-const mapStateToProps = state => ({
-    rooms: state.rooms.sortedRooms
-});
-
-export default connect(mapStateToProps)(FeaturedRooms);
+export default FeaturedRooms;

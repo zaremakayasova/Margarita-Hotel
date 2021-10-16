@@ -1,22 +1,30 @@
-import { connect } from 'react-redux';
 import './RoomsFilter.css';
 import { filterRoomTypes, filterRoomCapacity, filterPriceRange, filterMinSize, filterMaxSize, filterBreakfast, filterPets } from '../../redux/rooms/rooms.actions.js';
+import { useSelector, useDispatch } from 'react-redux';
 
 
-const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, filterMinSize, filterMaxSize, filterBreakfast, filterPets, price, minSize, maxSize, breakfast, pets }) => {
-    const handleRoomTypes = e => filterRoomTypes(e.target.value);
+const RoomsFilter = () => {
+    const price = useSelector((state) => state.rooms.price);
+    const minSize = useSelector(state => state.rooms.minSize);
+    const maxSize = useSelector(state => state.rooms.maxSize);
+    const breakfast = useSelector(state => state.rooms.breakfast);
+    const pets = useSelector(state => state.rooms.pets);
 
-    const handleRoomCapacity = e => filterRoomCapacity(parseInt(e.target.value));
+    const dispatch = useDispatch();
 
-    const handlePriceRange = e => filterPriceRange(parseInt(e.target.value));
+    const handleRoomTypes = e => dispatch(filterRoomTypes(e.target.value));
 
-    const handleMinSize = e => filterMinSize(e.target.value);
+    const handleRoomCapacity = e => dispatch(filterRoomCapacity(parseInt(e.target.value)));
 
-    const handleMaxSize = e => filterMaxSize(e.target.value);
+    const handlePriceRange = e => dispatch(filterPriceRange(parseInt(e.target.value)));
 
-    const handleBreakfast = () => filterBreakfast();
+    const handleMinSize = e => dispatch(filterMinSize(e.target.value));
 
-    const handlePets = () => filterPets();
+    const handleMaxSize = e => dispatch(filterMaxSize(e.target.value));
+
+    const handleBreakfast = () => dispatch(filterBreakfast());
+
+    const handlePets = () => dispatch(filterPets());
 
     return (
         <div className='rooms-filter'>
@@ -71,22 +79,4 @@ const RoomsFilter = ({ filterRoomTypes, filterRoomCapacity, filterPriceRange, fi
     );
 };
 
-const mapStateToProps = state => ({
-    price: state.rooms.price,
-    minSize: state.rooms.minSize,
-    maxSize: state.rooms.maxSize,
-    breakfast: state.rooms.breakfast,
-    pets: state.rooms.pets
-});
-
-const mapDispatchToProps = dispatch => ({
-    filterRoomTypes: roomType => dispatch(filterRoomTypes(roomType)),
-    filterRoomCapacity: roomCapacity => dispatch(filterRoomCapacity(roomCapacity)),
-    filterPriceRange: roomPrice => dispatch(filterPriceRange(roomPrice)),
-    filterMinSize: minSize => dispatch(filterMinSize(minSize)),
-    filterMaxSize: maxSize => dispatch(filterMaxSize(maxSize)),
-    filterBreakfast: () => dispatch(filterBreakfast()),
-    filterPets: () => dispatch(filterPets())
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(RoomsFilter);
+export default RoomsFilter;

@@ -1,13 +1,15 @@
 import './SingleRoom.css';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Banner from '../Banner/Banner';
 import StyledHero from '../StyledHero/StyledHero';
 import ErrorPage from '../../pages/ErrorPage/ErrorPage';
 
-const SingleRoom = ({ match, sortedRooms }) => {
+const SingleRoom = () => {
+    const sortedRooms = useSelector(state => state.rooms.sortedRooms);
+    const params = useParams();
     const matchedRoom = sortedRooms.find(room => (
-        room.fields.slug === match.params.slug
+        room.fields.slug === params.slug
     ));
 
     if (matchedRoom) {
@@ -56,8 +58,5 @@ const SingleRoom = ({ match, sortedRooms }) => {
     };
 };
 
-const mapStateToProps = state => ({
-    sortedRooms: state.rooms.sortedRooms
-});
 
-export default withRouter(connect(mapStateToProps)(SingleRoom));
+export default SingleRoom;

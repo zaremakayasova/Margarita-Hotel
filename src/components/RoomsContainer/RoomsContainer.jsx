@@ -1,10 +1,11 @@
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import './RoomsContainer.css';
 import Room from '../Room/Room';
 import RoomsFilter from '../RoomsFilter/RoomsFilter';
 
 
-const RoomsContainer = ({ sortedRooms }) => {
+const RoomsContainer = () => {
+    const sortedRooms = useSelector(state => state.rooms.sortedRooms);
     if (sortedRooms.length === 0) {
         return (
             <div className='empty-search'>
@@ -27,8 +28,4 @@ const RoomsContainer = ({ sortedRooms }) => {
     );
 };
 
-const mapStateToProps = state => ({
-    sortedRooms: state.rooms.sortedRooms
-});
-
-export default connect(mapStateToProps)(RoomsContainer);
+export default RoomsContainer;
